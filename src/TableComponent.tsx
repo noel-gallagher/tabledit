@@ -9,7 +9,7 @@ const emptyRow: row = {column_a: '', column_b: ''};
 
 type Table = row[]; 
 
-export const TableComponent: React.FC<{rows?: row[]}> = ({ rows = [emptyRow] }) => {
+export const TableComponent: React.FC<{rows?: row[]}> = ({ rows = [] }) => {
     const [tableState, setTableState] = useState<Table>(rows);
     const [currentRow, setCurrentRow] = useState<row>(emptyRow);
 
